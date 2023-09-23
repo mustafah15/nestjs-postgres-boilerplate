@@ -17,10 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run the tests
-        run: yarn docker-compose:test:cov
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v2
+        run: yarn docker-compose:test
 
       - name: Build
         run: yarn docker-compose:prod:build-only
